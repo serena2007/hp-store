@@ -5,13 +5,14 @@
    La clé "panier" est la même que dans main.js : ne pas la changer. */
 
 const CLE_PANIER = "panier";
-const CLE_PROMO = "hp-store-promo";
+const CLE_PROMO = "codePromo";
 const SEUIL_LIVRAISON_GRATUITE = 30; // € : livraison gratuite dès ce montant
 const FRAIS_LIVRAISON = 5; // € sinon
 
 // Codes promo : pourcentage de remise et montant minimum du panier
 const CODES_PROMO = {
   AUTOMNE20: { pourcentage: 20, minimum: 500 },
+  AUTOMNE25: { pourcentage: 25, minimum: 2000 },
 };
 
 const arrondir = (montant) => Math.round(montant * 100) / 100;
