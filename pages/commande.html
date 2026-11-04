@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- À CHANGER : description et titre de la page -->
+    <meta name="description" content="HP Store : finalisez votre commande (démonstration).">
+    <title>HP Store - Commande</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/commande.css" rel="stylesheet">
+</head>
+
+<body>
+    <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+    <!-- ===== EN-TÊTE : ne pas modifier, identique sur toutes les pages ===== -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white" aria-label="Navigation principale">
+            <div class="container">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand logo me-lg-4" href="../index.html" aria-label="HP Store, retour à l'accueil">
+                    <span class="logo-rond">hp</span>
+                </a>
+                <a class="btn-panier order-lg-last" href="panier.html" aria-label="Voir mon panier">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        aria-hidden="true">
+                        <path d="M3 4h2l2.4 11h10.2L20 7H6.2" />
+                        <circle cx="9" cy="19.5" r="1.3" />
+                        <circle cx="17" cy="19.5" r="1.3" />
+                    </svg>
+                    <span id="compteur-panier" class="badge rounded-pill">0</span>
+                </a>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="catalogue.html?categorie=pc-portables">PC
+                                portables</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogue.html?categorie=pc-bureau">PC de
+                                bureau</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="catalogue.html?categorie=imprimantes">Imprimantes</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="catalogue.html?categorie=accessoires">Accessoires</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#offres">Offres</a></li>
+                    </ul>
+                    <form class="d-flex me-lg-3" role="search" action="catalogue.html" method="get">
+                        <label class="visually-hidden" for="recherche">Rechercher un produit</label>
+                        <input class="form-control" id="recherche" type="search" name="q" placeholder="Rechercher">
+                        <button class="btn btn-hp ms-2" type="submit">OK</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="barre-grise">
+            <div class="container text-end">
+                <div class="form-check d-inline-block mb-0">
+                    <input class="form-check-input" type="checkbox" id="inclure-tva" checked>
+                    <label class="form-check-label" for="inclure-tva">Inclure la TVA</label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== CONTENU DE LA PAGE : c'est ici que vous travaillez ===== -->
+    <main id="contenu">
+        <div class="container py-5">
+            <h1 class="mb-4">Commande</h1>
+            <p class="alert alert-warning">Site de démonstration : aucune commande n'est réellement traitée et aucune
+                donnée bancaire n'est demandée.</p>
+
+            <div id="panier-vide" class="text-center py-5" hidden>
+                <p class="lead">Votre panier est vide.</p>
+                <a class="btn btn-hp" href="catalogue.html">Voir le catalogue</a>
+            </div>
+
+            <div id="confirmation" class="text-center py-5" role="status" hidden>
+                <h2>Merci pour votre commande !</h2>
+                <p>Numéro de commande : <strong id="numero-commande"></strong></p>
+                <p id="message-confirmation"></p>
+                <p class="text-secondary">Rappel : il s'agit d'une démonstration, rien ne sera livré ni facturé.</p>
+                <a class="btn btn-hp" href="../index.html">Retour à l'accueil</a>
+            </div>
+
+            <div id="zone-commande" class="row g-4" hidden>
+                <div class="col-lg-7">
+                    <form id="form-commande" class="needs-validation" novalidate>
+                        <fieldset class="mb-4">
+                            <legend class="h4">Coordonnées</legend>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="prenom">Prénom</label>
+                                    <input class="form-control" id="prenom" name="prenom" type="text"
+                                        autocomplete="given-name" required>
+                                    <div class="invalid-feedback">Veuillez saisir votre prénom.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="nom">Nom</label>
+                                    <input class="form-control" id="nom" name="nom" type="text"
+                                        autocomplete="family-name" required>
+                                    <div class="invalid-feedback">Veuillez saisir votre nom.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="email">Adresse e-mail</label>
+                                    <input class="form-control" id="email" name="email" type="email"
+                                        autocomplete="email" required>
+                                    <div class="invalid-feedback">Veuillez saisir une adresse e-mail valide.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="telephone">Téléphone</label>
+                                    <input class="form-control" id="telephone" name="telephone" type="tel"
+                                        autocomplete="tel" pattern="[0-9 +]{8,16}" required>
+                                    <div class="invalid-feedback">Veuillez saisir un numéro valide (chiffres, espaces ou
+                                        +).</div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="mb-4">
+                            <legend class="h4">Adresse de livraison</legend>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label class="form-label" for="adresse">Adresse</label>
+                                    <input class="form-control" id="adresse" name="adresse" type="text"
+                                        autocomplete="street-address" required>
+                                    <div class="invalid-feedback">Veuillez saisir votre adresse.</div>
+                                </div>
+                                <div class="col-md-5">
+                                    <label class="form-label" for="ville">Ville</label>
+                                    <input class="form-control" id="ville" name="ville" type="text"
+                                        autocomplete="address-level2" required>
+                                    <div class="invalid-feedback">Veuillez saisir votre ville.</div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" for="code-postal">Code postal</label>
+                                    <input class="form-control" id="code-postal" name="code-postal" type="text"
+                                        autocomplete="postal-code" pattern="[0-9A-Za-z -]{3,10}">
+                                    <div class="invalid-feedback">Code postal invalide.</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="pays">Pays</label>
+                                    <select class="form-select" id="pays" name="pays" autocomplete="country-name"
+                                        required>
+                                        <option value="">Choisir...</option>
+                                        <option>Cameroun</option>
+                                        <option>France</option>
+                                        <option>Belgique</option>
+                                        <option>Autre</option>
+                                    </select>
+                                    <div class="invalid-feedback">Veuillez choisir un pays.</div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="mb-4">
+                            <legend class="h4">Paiement (démonstration)</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paiement" id="paiement-livraison"
+                                    value="livraison" checked>
+                                <label class="form-check-label" for="paiement-livraison">Paiement à la livraison</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paiement" id="paiement-carte"
+                                    value="carte">
+                                <label class="form-check-label" for="paiement-carte">Carte bancaire (simulation, rien à
+                                    saisir)</label>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="conditions" required>
+                            <label class="form-check-label" for="conditions">J'ai compris qu'il s'agit d'un site de
+                                démonstration.</label>
+                            <div class="invalid-feedback">Veuillez cocher cette case pour continuer.</div>
+                        </div>
+
+                        <button class="btn btn-hp btn-lg" type="submit">Confirmer la commande</button>
+                    </form>
+                </div>
+
+                <div class="col-lg-5">
+                    <aside class="recap" aria-labelledby="titre-recap">
+                        <h2 id="titre-recap" class="h4">Récapitulatif</h2>
+                        <ul id="liste-recap" class="list-unstyled"></ul>
+                        <p id="erreur-recap" class="text-danger" role="alert" hidden></p>
+                        <dl class="totaux mb-0">
+                            <div>
+                                <dt>Sous-total</dt>
+                                <dd id="sous-total">0,00 €</dd>
+                            </div>
+                            <div id="ligne-reduction" hidden>
+                                <dt>Réduction</dt>
+                                <dd id="reduction">0,00 €</dd>
+                            </div>
+                            <div>
+                                <dt>Livraison</dt>
+                                <dd id="livraison">0,00 €</dd>
+                            </div>
+                            <div class="total">
+                                <dt>Total TTC</dt>
+                                <dd id="total">0,00 €</dd>
+                            </div>
+                        </dl>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== PIED DE PAGE : ne pas modifier, identique sur toutes les pages ===== -->
+    <footer class="pied">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <h2 class="h6">Boutique</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="catalogue.html?categorie=pc-portables">PC portables</a></li>
+                        <li><a href="catalogue.html?categorie=pc-bureau">PC de bureau</a></li>
+                        <li><a href="catalogue.html?categorie=imprimantes">Imprimantes</a></li>
+                        <li><a href="catalogue.html?categorie=accessoires">Accessoires</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="h6">Mon compte</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="panier.html">Mon panier</a></li>
+                        <li><a href="commande.html">Passer commande</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2 class="h6">À propos</h2>
+                    <p>HP Store est un projet pédagogique : une reproduction simplifiée de la boutique officielle HP,
+                        réalisée en HTML, CSS, JavaScript et Bootstrap. Aucune commande n'est réellement traitée.</p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 HP Store, projet pédagogique. HP est une marque de HP Development Company,
+                L.P.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/commande.js"></script>
+</body>
+
+</html>
