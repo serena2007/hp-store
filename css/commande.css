@@ -1,0 +1,53 @@
+/* HP Store - page de commande */
+.recap {
+    background: var(--perle);
+    border-radius: var(--rayon);
+    padding: 1.5rem;
+    position: sticky;
+    top: 1rem;
+}
+
+.recap-ligne {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--bordure);
+}
+
+.recap-ligne span:first-child {
+    flex: 1;
+}
+
+.totaux {
+    margin-top: 1rem;
+}
+
+.totaux>div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+}
+
+.totaux dt,
+.totaux dd {
+    font-weight: 400;
+    margin: 0;
+}
+
+.totaux .total {
+    font-size: 1.25rem;
+    border-top: 2px solid var(--noir);
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.totaux .total dt,
+.totaux .total dd {
+    font-weight: 700;
+}
+
+fieldset legend {
+    float: none;
+    width: auto;
+}

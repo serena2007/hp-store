@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="HP Store : PC portables, PC de bureau, imprimantes et accessoires. Projet pédagogique, reproduction simplifiée de la boutique HP.">
+    <title>HP Store - Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white" aria-label="Navigation principale">
+            <div class="container">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand logo me-lg-4" href="index.html" aria-label="HP Store, retour à l'accueil">
+                    <span class="logo-rond">hp</span>
+                </a>
+                <a class="btn-panier order-lg-last" href="pages/panier.html" aria-label="Voir mon panier">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        aria-hidden="true">
+                        <path d="M3 4h2l2.4 11h10.2L20 7H6.2" />
+                        <circle cx="9" cy="19.5" r="1.3" />
+                        <circle cx="17" cy="19.5" r="1.3" />
+                    </svg>
+                    <span id="compteur-panier" class="badge rounded-pill">0</span>
+                </a>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="pages/catalogue.html?categorie=pc-portables">PC
+                                portables</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/catalogue.html?categorie=pc-bureau">PC de
+                                bureau</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="pages/catalogue.html?categorie=imprimantes">Imprimantes</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="pages/catalogue.html?categorie=accessoires">Accessoires</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#offres">Offres</a></li>
+                    </ul>
+                    <form class="d-flex me-lg-3" role="search" action="pages/catalogue.html" method="get">
+                        <label class="visually-hidden" for="recherche">Rechercher un produit</label>
+                        <input class="form-control" id="recherche" type="search" name="q" placeholder="Rechercher">
+                        <button class="btn btn-hp ms-2" type="submit">OK</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="barre-grise">
+            <div class="container text-end">
+                <div class="form-check d-inline-block mb-0">
+                    <input class="form-check-input" type="checkbox" id="inclure-tva" checked>
+                    <label class="form-check-label" for="inclure-tva">Inclure la TVA</label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenu">
+
+        <div class="p-0">
+            <div id="banniere" class="carousel slide" role="region" data-bs-ride="carousel" data-bs-interval="4000"
+                data-bs-pause="false" aria-label="Offres en vedette">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#banniere" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Offre 1"></button>
+                    <button type="button" data-bs-target="#banniere" data-bs-slide-to="1" aria-label="Offre 2"></button>
+                    <button type="button" data-bs-target="#banniere" data-bs-slide-to="2" aria-label="Offre 3"></button>
+                    <button type="button" data-bs-target="#banniere" data-bs-slide-to="3" aria-label="Offre 4"></button>
+                    <button type="button" data-bs-target="#banniere" data-bs-slide-to="4" aria-label="Offre 5"></button>
+                    <button type="button" data-bs-target="#banniere" data-bs-slide-to="5" aria-label="Offre 6"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="slide slide-gris">
+                            <div class="slide-texte">
+                                <p class="slide-sur">Offre spéciale HyperX</p>
+                                <h1>-25 % sur les accessoires HyperX</h1>
+                                <p>Achetez au moins 2 accessoires éligibles et profitez de 25 % de remise immédiate avec
+                                    le code HYPERX25.</p>
+                                <a class="btn btn-clair" href="pages/catalogue.html?categorie=accessoires">J'en
+                                    profite</a>
+                            </div>
+                            <img class="visuel visuel-slide" src="images/slide-hyperx.webp"
+                                alt="Casque HyperX Cloud III avec micro" width="600" height="900">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slide slide-nuit">
+                            <div class="slide-texte">
+                                <p class="slide-sur">L'offre d'automne HP</p>
+                                <h2>Jusqu'à -25 % à l'achat d'un PC et d'un autre produit</h2>
+                                <p>Ajoutez un PC éligible et un accessoire à votre panier. Offres AUTOMNE20 et
+                                    AUTOMNE25.</p>
+                                <a class="btn btn-clair" href="pages/catalogue.html?categorie=pc-portables">Voir les PC
+                                    portables</a>
+                            </div>
+                            <img class="visuel visuel-slide" src="images/slide-omnibook.webp"
+                                alt="PC portable HP avec une souris sans fil" width="736" height="736" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slide slide-bleu">
+                            <div class="slide-texte">
+                                <p class="slide-sur">Imprimantes</p>
+                                <h2>Trouvez l'imprimante idéale en quelques clics</h2>
+                                <p>Jet d'encre, laser, multifonction : choisissez le modèle adapté à la maison ou au
+                                    bureau.</p>
+                                <a class="btn btn-clair" href="pages/catalogue.html?categorie=imprimantes">Découvrir</a>
+                            </div>
+                            <img class="visuel visuel-slide" src="images/slide-imprimante.webp"
+                                alt="Imprimante multifonction HP sur un bureau" width="736" height="675" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slide slide-prune">
+                            <div class="slide-texte">
+                                <p class="slide-sur">Black Friday 2026</p>
+                                <h2>Inscrivez-vous pour ne rien manquer</h2>
+                                <p>Soyez le premier à profiter des meilleures offres de l'année.</p>
+                                <a class="btn btn-clair" href="#titre-newsletter">S'inscrire</a>
+                            </div>
+                            <img class="visuel visuel-slide" src="images/slide-black-friday.webp"
+                                alt="Affiche Black Friday : jusqu'à 80 % de réduction" width="900" height="600"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slide slide-vert">
+                            <div class="slide-texte">
+                                <p class="slide-sur">Livraison</p>
+                                <h2>Livraison gratuite dès 30 € d'achat</h2>
+                                <p>Commandez vos produits HP et recevez-les chez vous, sans frais.</p>
+                                <a class="btn btn-clair" href="pages/catalogue.html">Voir le catalogue</a>
+                            </div>
+                            <img class="visuel visuel-slide" src="images/slide-livraison.webp"
+                                alt="Piles de cartons de PC portables HP" width="736" height="736" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="slide slide-ardoise">
+                            <div class="slide-texte">
+                                <p class="slide-sur">Boutique étudiante</p>
+                                <h2>Des réductions pour les étudiants</h2>
+                                <p>Vous étudiez ou vous travaillez dans l'éducation ? Profitez d'offres dédiées.</p>
+                                <a class="btn btn-clair" href="pages/catalogue.html?categorie=pc-portables">En savoir
+                                    plus</a>
+                            </div>
+                            <img class="visuel visuel-slide" src="images/slide-etudiante.webp"
+                                alt="Une femme travaillant sur un PC portable dans un bureau" width="900" height="900"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#banniere" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                        class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#banniere" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span><span
+                        class="visually-hidden">Suivant</span>
+                </button>
+                <button type="button" id="pause-banniere" class="btn-pause"
+                    aria-label="Mettre le défilement en pause">Pause</button>
+            </div>
+        </div>
+
+        <section class="section pb-0" aria-label="Catégories">
+            <div class="container">
+                <ul class="liste-rondes list-unstyled">
+                    <li><a href="pages/catalogue.html?categorie=pc-portables"><img class="rond"
+                                src="images/categorie-pc-portables.webp" alt="" width="240" height="240"
+                                loading="lazy">PC portables</a></li>
+                    <li><a href="pages/catalogue.html?categorie=pc-bureau"><img class="rond"
+                                src="images/categorie-pc-bureau.webp" alt="" width="240" height="240" loading="lazy">PC
+                            de bureau</a></li>
+                    <li><a href="pages/catalogue.html?categorie=imprimantes"><img class="rond"
+                                src="images/categorie-imprimantes.webp" alt="" width="240" height="240"
+                                loading="lazy">Imprimantes</a></li>
+                    <li><a href="pages/catalogue.html?categorie=accessoires"><img class="rond"
+                                src="images/categorie-accessoires.webp" alt="" width="240" height="240"
+                                loading="lazy">Accessoires</a></li>
+                    <li><a href="#offres"><span class="rond rond-jaune" aria-hidden="true">%</span>Offres</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="offres" aria-labelledby="titre-offres">
+            <div class="container">
+                <h2 id="titre-offres" class="titre-section">Nos offres du moment</h2>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="carte-produit">
+                            <img class="visuel visuel-contain" src="images/produit-omnibook-15.webp"
+                                alt="PC portable HP OmniBook 3 15" width="467" height="700" loading="lazy">
+                            <div class="corps">
+                                <p class="pastille">-20 % dès 500 €</p>
+                                <p class="stock stock-ok">En stock</p>
+                                <h3>HP OmniBook 3 15</h3>
+                                <p class="specs">AMD Ryzen AI 5, 24 Go RAM, 512 Go SSD, écran 15,6" FHD</p>
+                                <p class="prix"><span class="prix-valeur" data-ttc="949">949,00 €</span> <span
+                                        class="prix-etiquette">TVA incluse</span></p>
+                                <a class="btn btn-hp w-100" href="pages/produit.html?id=1">Voir le produit</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="carte-produit">
+                            <img class="visuel visuel-contain" src="images/produit-omnibook-17.webp"
+                                alt="PC portable HP OmniBook 3 17" width="467" height="700" loading="lazy">
+                            <div class="corps">
+                                <p class="pastille">-20 % dès 500 €</p>
+                                <p class="stock stock-bientot">Bientôt disponible</p>
+                                <h3>HP OmniBook 3 17</h3>
+                                <p class="specs">AMD Ryzen 5, 16 Go RAM, 512 Go SSD, écran 17,3" FHD</p>
+                                <p class="prix"><span class="prix-valeur" data-ttc="899">899,00 €</span> <span
+                                        class="prix-etiquette">TVA incluse</span></p>
+                                <a class="btn btn-hp w-100" href="pages/produit.html?id=2">Voir le produit</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="carte-produit">
+                            <img class="visuel visuel-contain" src="images/produit-deskjet-2800.webp"
+                                alt="Imprimante HP DeskJet 2800 avec ses câbles" width="500" height="375"
+                                loading="lazy">
+                            <div class="corps">
+                                <p class="pastille">Instant Ink</p>
+                                <p class="stock stock-ok">En stock</p>
+                                <h3>HP DeskJet 2800</h3>
+                                <p class="specs">Imprimante jet d'encre multifonction, Wi-Fi</p>
+                                <p class="prix"><span class="prix-valeur" data-ttc="69">69,00 €</span> <span
+                                        class="prix-etiquette">TVA incluse</span></p>
+                                <a class="btn btn-hp w-100" href="pages/produit.html?id=3">Voir le produit</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="carte-produit">
+                            <img class="visuel visuel-contain" src="images/produit-souris.webp"
+                                alt="Souris HP sans fil et son emballage" width="537" height="537" loading="lazy">
+                            <div class="corps">
+                                <p class="pastille">-30 % avec un PC</p>
+                                <p class="stock stock-ok">En stock</p>
+                                <h3>Souris HP sans fil</h3>
+                                <p class="specs">Souris optique sans fil, 1600 ppp, pile incluse</p>
+                                <p class="prix"><span class="prix-valeur" data-ttc="19.9">19,90 €</span> <span
+                                        class="prix-etiquette">TVA incluse</span></p>
+                                <a class="btn btn-hp w-100" href="pages/produit.html?id=4">Voir le produit</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pt-0" aria-labelledby="titre-partenaires">
+            <div class="container">
+                <h2 id="titre-partenaires" class="titre-section">Nos partenaires</h2>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="carte-sombre fond-1">
+                            <img class="visuel-partenaire" src="images/partenaire-windows-11.webp" alt="Logo Windows 11"
+                                width="700" height="396" loading="lazy">
+                            <div class="corps-sombre">
+                                <h3>Passez à Windows 11</h3>
+                                <p>Et profitez d'une expérience PC plus sûre et plus fluide.</p>
+                                <a class="btn btn-contour-clair" href="pages/catalogue.html?categorie=pc-portables">En
+                                    savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="carte-sombre fond-2">
+                            <img class="visuel-partenaire" src="images/partenaire-amd.webp"
+                                alt="Processeur AMD Ryzen AI" width="700" height="700" loading="lazy">
+                            <div class="corps-sombre">
+                                <h3>Processeurs AMD Ryzen AI</h3>
+                                <p>IA intégrée et graphismes de nouvelle génération.</p>
+                                <a class="btn btn-contour-clair" href="pages/catalogue.html?categorie=pc-portables">En
+                                    savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="carte-sombre fond-3">
+                            <img class="visuel-partenaire" src="images/partenaire-intel.webp"
+                                alt="Processeurs Intel Core Ultra" width="700" height="389" loading="lazy">
+                            <div class="corps-sombre">
+                                <h3>Processeurs Intel Core Ultra</h3>
+                                <p>Une expérience conçue pour vous.</p>
+                                <a class="btn btn-contour-clair" href="pages/catalogue.html?categorie=pc-bureau">En
+                                    savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="carte-sombre fond-4">
+                            <img class="visuel-partenaire" src="images/partenaire-snapdragon.webp"
+                                alt="Processeur Snapdragon X2 Plus" width="236" height="177" loading="lazy">
+                            <div class="corps-sombre">
+                                <h3>Processeurs Snapdragon X</h3>
+                                <p>Autonomie allant jusqu'à 45 heures.</p>
+                                <a class="btn btn-contour-clair" href="pages/catalogue.html?categorie=pc-portables">En
+                                    savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pt-0" aria-labelledby="titre-programmes">
+            <div class="container">
+                <h2 id="titre-programmes" class="titre-section">Découvrez nos programmes avantages</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <img class="visuel visuel-programme" src="images/programme-etudiant.webp"
+                            alt="Boutique de produits technologiques" width="445" height="700" loading="lazy">
+                        <h3 class="titre-programme">Boutique étudiante</h3>
+                        <p>Étudiant ou enseignant ? Profitez de réductions dédiées.</p>
+                        <a class="btn btn-contour" href="pages/catalogue.html">En savoir plus</a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <img class="visuel visuel-programme" src="images/programme-entreprises.webp"
+                            alt="Panneau Business Opportunity" width="609" height="700" loading="lazy">
+                        <h3 class="titre-programme">Avantages entreprises</h3>
+                        <p>Rejoignez le programme pour les professionnels.</p>
+                        <a class="btn btn-contour" href="pages/catalogue.html">En savoir plus</a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <img class="visuel visuel-programme" src="images/programme-partenaires.webp"
+                            alt="Deux professionnels qui se serrent la main devant un tableau de stratégie" width="700"
+                            height="700" loading="lazy">
+                        <h3 class="titre-programme">Entreprises partenaires</h3>
+                        <p>Inscrivez-vous avec votre e-mail professionnel pour économiser.</p>
+                        <a class="btn btn-contour" href="pages/catalogue.html">En savoir plus</a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <img class="visuel visuel-programme" src="images/programme-friends.webp"
+                            alt="Friends and Family" width="700" height="700" loading="lazy">
+                        <h3 class="titre-programme">Friends &amp; Family</h3>
+                        <p>Un proche travaille chez HP ? Profitez de remises en deux clics.</p>
+                        <a class="btn btn-contour" href="pages/catalogue.html">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pt-0" aria-labelledby="titre-avantages">
+            <div class="container">
+                <h2 id="titre-avantages" class="titre-section">Pourquoi choisir le HP Store ?</h2>
+                <ul class="liste-avantages list-unstyled">
+                    <li>Livraison gratuite dès 30 €</li>
+                    <li>Garantie de prix</li>
+                    <li>Assistance HP</li>
+                    <li>Paiement de démonstration</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container pb-5" aria-labelledby="titre-newsletter">
+            <div class="bloc-newsletter">
+                <h2 id="titre-newsletter">Inscrivez-vous</h2>
+                <p>Les abonnés bénéficient d'offres spéciales, de nouveautés et de -30 % sur les accessoires avec un PC.
+                </p>
+                <form id="form-newsletter" class="row g-2">
+                    <div class="col-12 col-md-7">
+                        <label class="visually-hidden" for="email-newsletter">Votre adresse e-mail</label>
+                        <input class="form-control" id="email-newsletter" type="email" name="email"
+                            placeholder="Votre adresse e-mail" required>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <button class="btn btn-clair w-100" type="submit">S'inscrire</button>
+                    </div>
+                </form>
+                <p id="message-newsletter" class="mt-2 mb-0" role="status"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pied">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <h2 class="h6">Boutique</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="pages/catalogue.html?categorie=pc-portables">PC portables</a></li>
+                        <li><a href="pages/catalogue.html?categorie=pc-bureau">PC de bureau</a></li>
+                        <li><a href="pages/catalogue.html?categorie=imprimantes">Imprimantes</a></li>
+                        <li><a href="pages/catalogue.html?categorie=accessoires">Accessoires</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="h6">Mon compte</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="pages/panier.html">Mon panier</a></li>
+                        <li><a href="pages/commande.html">Passer commande</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2 class="h6">À propos</h2>
+                    <p>HP Store est un projet pédagogique : une reproduction simplifiée de la boutique officielle HP,
+                        réalisée en HTML, CSS, JavaScript et Bootstrap. Aucune commande n'est réellement traitée.</p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 HP Store, projet pédagogique. HP est une marque de HP Development Company,
+                L.P.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

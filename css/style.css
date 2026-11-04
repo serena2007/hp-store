@@ -1,0 +1,555 @@
+/* ==========================================================
+   HP Store - styles communs (chargé après Bootstrap)
+   Police unique : DM Sans (légère, lisible, chargement rapide)
+   ========================================================== */
+
+:root {
+    --noir: #1f2229;
+    --anthracite: #2b2e35;
+    /* boutons sombres */
+    --jaune: #f9f24d;
+    /* couleur d'accent, comme la boutique HP */
+    --bleu-hp: #0096d6;
+    --gris: #f2f2f2;
+    --gris-texte: #565c68;
+    --bordure: #d9dde3;
+    --vert: #17653f;
+    --orange: #9a4a05;
+    --rayon: 1rem;
+    --police: "DM Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    font-family: var(--police);
+    color: var(--noir);
+    line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+}
+
+a {
+    color: var(--noir);
+}
+
+/* Accessibilité */
+.lien-evitement {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--noir);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    z-index: 2000;
+}
+
+.lien-evitement:focus {
+    left: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--bleu-hp);
+    outline-offset: 2px;
+}
+
+/* Boutons : rectangulaires, texte en majuscules */
+.btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    border-radius: 2px;
+    padding: 0.6rem 1.1rem;
+}
+
+.btn-hp {
+    background: var(--anthracite);
+    border-color: var(--anthracite);
+    color: #fff;
+}
+
+.btn-hp:hover,
+.btn-hp:focus {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+.btn-clair {
+    background: #fff;
+    border-color: #fff;
+    color: var(--noir);
+}
+
+.btn-clair:hover {
+    background: var(--jaune);
+    border-color: var(--jaune);
+    color: var(--noir);
+}
+
+.btn-contour {
+    background: transparent;
+    border: 1px solid var(--noir);
+    color: var(--noir);
+}
+
+.btn-contour:hover {
+    background: var(--noir);
+    color: #fff;
+}
+
+.btn-contour-clair {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-contour-clair:hover {
+    background: #fff;
+    color: var(--noir);
+}
+
+/* En-tête */
+.navbar .nav-link {
+    color: var(--noir);
+    font-size: 1.02rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+}
+
+.navbar .nav-link:hover {
+    text-decoration: underline;
+}
+
+.logo-rond {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background: var(--bleu-hp);
+    color: #fff;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.15rem;
+}
+
+.btn-panier {
+    position: relative;
+    color: var(--noir);
+    margin-left: auto;
+    margin-right: 0.5rem;
+    padding: 0.25rem;
+}
+
+.btn-panier .badge {
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    background: var(--anthracite);
+    color: #fff;
+}
+
+.barre-grise {
+    background: var(--gris);
+    padding: 0.45rem 0;
+    font-size: 0.95rem;
+}
+
+/* Zones d'image provisoires (à remplacer par de vraies images) */
+.visuel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, #e4e7ec, #f4f5f7);
+    color: var(--gris-texte);
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: var(--rayon);
+}
+
+img.visuel {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+/* Bannière (carrousel) */
+.slide {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    min-height: clamp(380px, 62vh, 600px);
+    padding: 3rem 6rem;
+    color: #fff;
+    border-radius: 0;
+}
+
+.slide-gris {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 75%), url("../images/fond-slide-1.webp") center / cover no-repeat, #4b5563;
+}
+
+.slide-nuit {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 75%), url("../images/fond-slide-2.webp") center / cover no-repeat, #34394a;
+}
+
+.slide-prune {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 75%), url("../images/fond-slide-4.webp") center / cover no-repeat, #3b1a4a;
+}
+
+.slide-vert {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 75%), url("../images/fond-slide-5.webp") center / cover no-repeat, #0f3d2e;
+}
+
+.slide-ardoise {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 75%), url("../images/fond-slide-6.webp") center / cover no-repeat, #26324a;
+}
+
+.slide-bleu {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 75%), url("../images/fond-slide-3.webp") center / cover no-repeat, #0b4f78;
+}
+
+.slide-texte {
+    flex: 1;
+    max-width: 38rem;
+}
+
+.slide-texte h1,
+.slide-texte h2 {
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.slide-sur {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.visuel-slide {
+    flex: 1;
+    display: none;
+    min-height: 340px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.carousel-indicators {
+    margin-bottom: 0.5rem;
+}
+
+img.visuel-slide {
+    height: clamp(260px, 42vh, 460px);
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: transparent;
+}
+
+img.rond {
+    object-fit: contain;
+    background: #f4f5f7;
+}
+
+.carte-produit img.visuel {
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background: #fff;
+    padding: 0.75rem;
+}
+
+#banniere {
+    position: relative;
+}
+
+.btn-pause {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.6rem;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.8rem;
+}
+
+.btn-pause:hover {
+    background: #000;
+}
+
+/* Sections */
+.section {
+    padding: 3rem 0;
+}
+
+.titre-section {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/* Catégories rondes */
+.liste-rondes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2.5rem;
+    margin: 0;
+}
+
+.liste-rondes a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--noir);
+}
+
+.liste-rondes a:hover {
+    text-decoration: underline;
+}
+
+.rond {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e4e7ec, #f4f5f7);
+    font-size: 2.2rem;
+}
+
+.rond-jaune {
+    background: var(--jaune);
+}
+
+/* Cartes produits (réutilisables dans catalogue.css) */
+.carte-produit {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+    overflow: hidden;
+}
+
+.carte-produit .visuel {
+    border-radius: 0;
+}
+
+.carte-produit .corps {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.1rem;
+}
+
+.carte-produit h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.carte-produit .specs {
+    color: var(--gris-texte);
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.carte-produit .prix {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.carte-produit .prix-etiquette {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--gris-texte);
+}
+
+.pastille {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--jaune);
+    font-size: 0.85rem;
+    padding: 0.15rem 0.7rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.stock {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.stock-ok {
+    color: var(--vert);
+}
+
+.stock-bientot {
+    color: var(--orange);
+}
+
+/* Cartes partenaires sombres */
+.carte-sombre {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: var(--rayon);
+    overflow: hidden;
+    color: #fff;
+    background: #0a1b33;
+}
+
+.visuel-partenaire {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.corps-sombre {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 1.25rem;
+}
+
+.corps-sombre p {
+    flex: 1;
+}
+
+.carte-sombre h3 {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.fond-1 {
+    background: #0b2a4a;
+}
+
+.fond-2 {
+    background: #0a0f18;
+}
+
+.fond-3 {
+    background: #0a1230;
+}
+
+.fond-4 {
+    background: #1a0508;
+}
+
+/* Programmes avantages */
+.visuel-programme {
+    margin-bottom: 1rem;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: var(--perle);
+}
+
+.titre-programme {
+    font-size: 1.25rem;
+}
+
+/* Avantages */
+.liste-avantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    background: var(--gris);
+    padding: 1.25rem;
+    margin: 0;
+}
+
+.liste-avantages li {
+    text-decoration: underline;
+}
+
+/* Newsletter */
+.bloc-newsletter {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), url("../images/fond-newsletter.webp") center / cover no-repeat, #000;
+    color: #fff;
+    border-radius: var(--rayon);
+    padding: 3rem 2rem;
+    max-width: 100%;
+}
+
+.bloc-newsletter h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 400;
+}
+
+.bloc-newsletter p {
+    max-width: 40rem;
+}
+
+/* Pied de page */
+.pied {
+    background: var(--noir);
+    color: #cfd3da;
+    padding: 3rem 0 1rem;
+}
+
+.pied h2 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.pied a {
+    color: #cfd3da;
+    text-decoration: none;
+}
+
+.pied a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.pied li {
+    margin-bottom: 0.4rem;
+}
+
+.copyright {
+    border-top: 1px solid #3a3f49;
+    margin: 1.75rem 0 0;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .visuel-slide {
+        display: flex;
+    }
+}
+
+@media (max-width: 767px) {
+    .slide {
+        padding: 2rem 1.5rem 3rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
