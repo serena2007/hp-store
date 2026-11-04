@@ -2,11 +2,11 @@
    Les valeurs après la virgule servent de secours si la variable n'existe pas encore. */
 
 .panneau-filtres {
-  background-color: var(--hp-gris-clair, #f5f5f5);
+  background-color: var(--gris, #f5f5f5);
 }
 
 .carte-produit {
-  border-color: var(--hp-gris-bordure, #dee2e6);
+  border-color: var(--bordure, #dee2e6);
   transition: box-shadow 0.2s ease;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .carte-produit-nom a:hover {
-  color: var(--hp-bleu, #0096d6);
+  color: var(--bleu-hp, #0096d6);
   text-decoration: underline;
 }
 
@@ -49,7 +49,7 @@
 .carte-produit-prix {
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--hp-noir, #212529);
+  color: var(--noir, #212529);
 }
 
 .carte-produit-tva {
@@ -61,11 +61,9 @@
   opacity: 0.5;
 }
 
-.btn-primary {
-  --bs-btn-bg: var(--hp-bleu-fonce, #0278ab);
-  --bs-btn-border-color: var(--hp-bleu-fonce, #0278ab);
-  --bs-btn-hover-bg: #025d85;
-  --bs-btn-hover-border-color: #025d85;
-  --bs-btn-active-bg: #025d85;
-  --bs-btn-active-border-color: #025d85;
+.btn-hp:disabled {
+  background: var(--anthracite, #2b2e35);
+  border-color: var(--anthracite, #2b2e35);
+  color: #fff;
+  opacity: 0.5;
 }

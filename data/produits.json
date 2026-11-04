@@ -1,0 +1,234 @@
+[
+  {
+    "id": 1,
+    "nom": "HP OmniBook 3 15",
+    "reference": "OB3-15-A1",
+    "categorie": "pc-portables",
+    "usage": "maison",
+    "prix": 949,
+    "stock": 12,
+    "image": "produit-omnibook-15.webp",
+    "description": "Un portable polyvalent avec processeur AMD Ryzen AI pour le travail et les loisirs.",
+    "caracteristiques": {
+      "processeur": "AMD Ryzen AI 5",
+      "ram": "24 Go",
+      "stockage": "512 Go SSD",
+      "ecran": "15,6 pouces FHD"
+    }
+  },
+  {
+    "id": 2,
+    "nom": "HP OmniBook 3 17",
+    "reference": "OB3-17-B1",
+    "categorie": "pc-portables",
+    "usage": "maison",
+    "prix": 899,
+    "stock": 0,
+    "image": "produit-omnibook-17.webp",
+    "description": "Un grand écran de 17,3 pouces pour travailler confortablement. Bientôt disponible.",
+    "caracteristiques": {
+      "processeur": "AMD Ryzen 5",
+      "ram": "16 Go",
+      "stockage": "512 Go SSD",
+      "ecran": "17,3 pouces FHD"
+    }
+  },
+  {
+    "id": 3,
+    "nom": "HP DeskJet 2800",
+    "reference": "DJ2800",
+    "categorie": "imprimantes",
+    "usage": "maison",
+    "prix": 69,
+    "stock": 25,
+    "image": "produit-deskjet-2800.webp",
+    "description": "Imprimante jet d'encre multifonction compacte, idéale pour la maison.",
+    "caracteristiques": {
+      "technologie": "Jet d'encre multifonction",
+      "connectique": "Wi-Fi, USB",
+      "fonctions": "Impression, copie, numérisation"
+    }
+  },
+  {
+    "id": 4,
+    "nom": "Souris HP sans fil",
+    "reference": "HP-S230",
+    "categorie": "accessoires",
+    "usage": "maison",
+    "prix": 19.9,
+    "stock": 40,
+    "image": "produit-souris.webp",
+    "description": "Souris optique sans fil, simple et fiable au quotidien.",
+    "caracteristiques": {
+      "connectique": "Sans fil 2,4 GHz",
+      "resolution": "1600 ppp",
+      "alimentation": "Pile incluse"
+    }
+  },
+  {
+    "id": 5,
+    "nom": "HP Pavilion Gaming 16",
+    "reference": "PVG-16-C2",
+    "categorie": "pc-portables",
+    "usage": "gaming",
+    "prix": 1099.99,
+    "stock": 4,
+    "image": "categorie-accessoires.webp",
+    "description": "Un portable gaming avec carte graphique dédiée et écran fluide.",
+    "caracteristiques": {
+      "processeur": "Intel Core i5",
+      "ram": "16 Go",
+      "stockage": "512 Go SSD",
+      "carte-graphique": "NVIDIA GeForce RTX 4050",
+      "ecran": "16,1 pouces 144 Hz"
+    }
+  },
+  {
+    "id": 6,
+    "nom": "HP ProBook 450 G10",
+    "reference": "PB450-G10",
+    "categorie": "pc-portables",
+    "usage": "pro",
+    "prix": 879,
+    "stock": 8,
+    "image": "categorie-pc-portables.webp",
+    "description": "Un portable professionnel robuste et sécurisé pour les équipes.",
+    "caracteristiques": {
+      "processeur": "Intel Core i5",
+      "ram": "16 Go",
+      "stockage": "512 Go SSD",
+      "ecran": "15,6 pouces FHD"
+    }
+  },
+  {
+    "id": 7,
+    "nom": "HP Pavilion Desktop TP01",
+    "reference": "PVD-TP01",
+    "categorie": "pc-bureau",
+    "usage": "maison",
+    "prix": 599,
+    "stock": 10,
+    "image": "categorie-pc-bureau.webp",
+    "description": "Un PC de bureau compact pour la famille et les études.",
+    "caracteristiques": {
+      "processeur": "AMD Ryzen 5",
+      "ram": "8 Go",
+      "stockage": "512 Go SSD",
+      "systeme": "Windows 11"
+    }
+  },
+  {
+    "id": 8,
+    "nom": "HP OMEN 25L",
+    "reference": "OMEN-25L",
+    "categorie": "pc-bureau",
+    "usage": "gaming",
+    "prix": 1499,
+    "stock": 3,
+    "image": "produit-deskjet-2800.webp",
+    "description": "Une tour gaming performante, conçue pour les jeux récents.",
+    "caracteristiques": {
+      "processeur": "Intel Core i7",
+      "ram": "32 Go",
+      "stockage": "1 To SSD",
+      "carte-graphique": "NVIDIA GeForce RTX 4060"
+    }
+  },
+  {
+    "id": 9,
+    "nom": "HP ProDesk 400 G9",
+    "reference": "PD400-G9",
+    "categorie": "pc-bureau",
+    "usage": "pro",
+    "prix": 729,
+    "stock": 6,
+    "image": "partenaire-amd.webp",
+    "description": "Un PC de bureau professionnel fiable, facile à entretenir.",
+    "caracteristiques": {
+      "processeur": "Intel Core i5",
+      "ram": "16 Go",
+      "stockage": "512 Go SSD",
+      "systeme": "Windows 11 Pro"
+    }
+  },
+  {
+    "id": 10,
+    "nom": "HP LaserJet M110we",
+    "reference": "LJ-M110WE",
+    "categorie": "imprimantes",
+    "usage": "pro",
+    "prix": 119.9,
+    "stock": 15,
+    "image": "programme-etudiant.webp",
+    "description": "Imprimante laser monochrome rapide et compacte pour le bureau.",
+    "caracteristiques": {
+      "technologie": "Laser monochrome",
+      "connectique": "Wi-Fi, USB",
+      "vitesse": "20 pages par minute"
+    }
+  },
+  {
+    "id": 11,
+    "nom": "HP OfficeJet Pro 9120e",
+    "reference": "OJP-9120E",
+    "categorie": "imprimantes",
+    "usage": "pro",
+    "prix": 229,
+    "stock": 0,
+    "image": "slide-imprimante.webp",
+    "description": "Imprimante multifonction couleur recto verso pour les petites entreprises.",
+    "caracteristiques": {
+      "technologie": "Jet d'encre couleur multifonction",
+      "connectique": "Wi-Fi, Ethernet, USB",
+      "fonctions": "Impression, copie, numérisation, fax"
+    }
+  },
+  {
+    "id": 12,
+    "nom": "Clavier HP 235 sans fil",
+    "reference": "HP-K235",
+    "categorie": "accessoires",
+    "usage": "maison",
+    "prix": 29.9,
+    "stock": 30,
+    "image": "slide-hyperx.webp",
+    "description": "Clavier sans fil compact et silencieux, avec disposition AZERTY.",
+    "caracteristiques": {
+      "connectique": "Sans fil 2,4 GHz",
+      "disposition": "AZERTY",
+      "couleur": "Noir"
+    }
+  },
+  {
+    "id": 13,
+    "nom": "Casque HyperX Cloud III",
+    "reference": "HX-CLOUD3",
+    "categorie": "accessoires",
+    "usage": "gaming",
+    "prix": 99.99,
+    "stock": 14,
+    "image": "slide-livraison.webp",
+    "description": "Casque gaming confortable avec micro détachable et son enveloppant.",
+    "caracteristiques": {
+      "connectique": "USB et jack 3,5 mm",
+      "micro": "Détachable",
+      "couleur": "Noir et rouge"
+    }
+  },
+  {
+    "id": 14,
+    "nom": "Sac à dos HP Renew 15,6 pouces",
+    "reference": "HP-RENEW-156",
+    "categorie": "accessoires",
+    "usage": "pro",
+    "prix": 39.9,
+    "stock": 4,
+    "image": "slide-omnibook.webp",
+    "description": "Sac à dos résistant à l'eau, fabriqué avec des matériaux recyclés.",
+    "caracteristiques": {
+      "compatibilite": "Portables jusqu'à 15,6 pouces",
+      "matiere": "Matériaux recyclés",
+      "couleur": "Gris"
+    }
+  }
+]

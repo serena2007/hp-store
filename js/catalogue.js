@@ -101,8 +101,8 @@ function creerCarte(p) {
             <span class="carte-produit-tva">TVA incluse</span>
           </p>
           <div class="d-grid gap-2">
-            <a class="btn btn-outline-primary" href="produit.html?id=${encodeURIComponent(p.id)}">Voir produit</a>
-            <button type="button" class="btn btn-primary btn-ajouter" data-id="${echapper(p.id)}" ${enStock ? "" : "disabled"}>
+            <a class="btn btn-contour" href="produit.html?id=${encodeURIComponent(p.id)}">Voir produit</a>
+            <button type="button" class="btn btn-hp btn-ajouter" data-id="${echapper(p.id)}" ${enStock ? "" : "disabled"}>
               ${enStock ? "Ajouter au panier" : "Indisponible"}
             </button>
           </div>
