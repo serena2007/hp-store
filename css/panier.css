@@ -1,0 +1,17 @@
+.panier-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--bordure, #d9dde3);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+.champ-quantite {
+  width: 6rem;
+}
+
+.recap {
+  background: var(--gris, #f2f2f2);
+}

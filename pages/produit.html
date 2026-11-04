@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fiche produit - HP Store</title>
+  <meta name="description" content="Fiche détaillée d'un produit HP : caractéristiques, prix et disponibilité.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<link href="../css/produits.css" rel="stylesheet">
+</head>
+<body>
+
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-white" aria-label="Navigation principale">
+        <div class="container">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand logo me-lg-4" href="../index.html" aria-label="HP Store, retour à l'accueil">
+                <span class="logo-rond">hp</span>
+            </a>
+            <a class="btn-panier order-lg-last" href="panier.html" aria-label="Voir mon panier">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    aria-hidden="true">
+                    <path d="M3 4h2l2.4 11h10.2L20 7H6.2" />
+                    <circle cx="9" cy="19.5" r="1.3" />
+                    <circle cx="17" cy="19.5" r="1.3" />
+                </svg>
+                <span id="compteur-panier" class="badge rounded-pill">0</span>
+            </a>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="catalogue.html?categorie=pc-portables">PC portables</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogue.html?categorie=pc-bureau">PC de bureau</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogue.html?categorie=imprimantes">Imprimantes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogue.html?categorie=accessoires">Accessoires</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#offres">Offres</a></li>
+                </ul>
+                <form class="d-flex me-lg-3" role="search" action="catalogue.html" method="get">
+                    <label class="visually-hidden" for="recherche">Rechercher un produit</label>
+                    <input class="form-control" id="recherche" type="search" name="q" placeholder="Rechercher">
+                    <button class="btn-hp ms-2" type="submit">OK</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+  <main id="contenu" class="container py-4">
+    <nav aria-label="Fil d'Ariane">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+        <li class="breadcrumb-item"><a href="catalogue.html">Catalogue</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="fil-nom">Produit</li>
+      </ol>
+    </nav>
+
+    <h1 class="h2 mb-4" id="produit-titre">Chargement du produit…</h1>
+
+    <!-- Produit introuvable ou erreur de chargement -->
+    <div class="alert alert-warning d-none" id="erreur-produit" role="alert">
+      <p class="mb-3" id="texte-erreur"></p>
+      <a class="btn-hp" href="catalogue.html">Retour au catalogue</a>
+    </div>
+
+    <!-- Fiche produit (remplie par js/produit.js) -->
+    <div class="d-none" id="fiche-produit">
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <img id="image-principale" class="fiche-image-principale"
+               src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               alt="" width="800" height="600">
+          <div class="d-flex flex-wrap gap-2 mt-3" id="miniatures"></div>
+        </div>
+
+        <div class="col-md-6">
+          <p class="text-body-secondary mb-2" id="produit-reference"></p>
+          <p class="mb-3" id="produit-stock"></p>
+          <p class="fiche-prix mb-0" id="produit-prix"></p>
+          <p class="text-body-secondary">TVA incluse</p>
+          <p id="produit-description"></p>
+          <p>Usage : <span id="produit-usage"></span></p>
+
+          <form id="formulaire-ajout" class="mt-4">
+            <div class="d-flex flex-wrap align-items-end gap-3">
+              <div>
+                <label for="quantite" class="form-label">Quantité</label>
+                <input type="number" class="form-control fiche-quantite" id="quantite" value="1" min="1" step="1" required>
+              </div>
+              <button type="submit" class="btn-hp btn-lg" id="btn-ajouter">Ajouter au panier</button>
+            </div>
+          </form>
+
+          <div class="alert d-none mt-3" id="message-ajout" role="status">
+            <span id="message-texte"></span>
+            <a class="alert-link ms-2 d-none" id="lien-panier" href="panier.html">Voir le panier</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="mt-5" aria-labelledby="titre-caracteristiques">
+        <h2 class="h4" id="titre-caracteristiques">Caractéristiques</h2>
+        <div class="table-responsive">
+          <table class="table table-striped fiche-tableau">
+            <caption class="visually-hidden">Caractéristiques techniques du produit</caption>
+            <tbody id="tableau-caracteristiques"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pied">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <h2 class="h6">Boutique</h2>
+                <ul class="list-unstyled">
+                    <li><a href="catalogue.html?categorie=pc-portables">PC portables</a></li>
+                    <li><a href="catalogue.html?categorie=pc-bureau">PC de bureau</a></li>
+                    <li><a href="catalogue.html?categorie=imprimantes">Imprimantes</a></li>
+                    <li><a href="catalogue.html?categorie=accessoires">Accessoires</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3">
+                <h2 class="h6">Mon compte</h2>
+                <ul class="list-unstyled">
+                    <li><a href="panier.html">Mon panier</a></li>
+                    <li><a href="commande.html">Passer commande</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6">
+                <h2 class="h6">À propos</h2>
+                <p>HP Store est un projet pédagogique : une reproduction simplifiée de la boutique officielle HP,
+                    réalisée en HTML, CSS, JavaScript et Bootstrap. Aucune commande n'est réellement traitée.</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 HP Store, projet pédagogique. HP est une marque de HP Development Company, L.P.</p>
+    </div>
+</footer>
+
+  <script src="../js/main.js"></script>
+<script src="../js/panier.js"></script>
+<script src="../js/produit.js"></script>   <!-- produit.js dans produit.html -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
